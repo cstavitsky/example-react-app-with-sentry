@@ -7,13 +7,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 Sentry.init({
-  dsn: "https://19bf30ba24d54842882fb73b7c79888a@o383777.ingest.sentry.io/5764148",
+  dsn: "https://7fa2c92502c4493cae08fa5808d1b0b1@o660004.ingest.sentry.io/5764191",
+  // BrowserTracing allows automatic page load capturing for performance
   integrations: [new Integrations.BrowserTracing()],
-
-  // Set tracesSampleRate to 1.0 to capture 100%
-  // of transactions for performance monitoring.
-  // We recommend adjusting this value in production
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 1.0, // 1.0 ensures every transaction will be sent to Sentry for performance monitoring.
 });
 
 ReactDOM.render(
